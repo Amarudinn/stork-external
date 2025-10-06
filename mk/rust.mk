@@ -4,13 +4,20 @@ RUST_TARGET_DIR := $(WORKSPACE_ROOT)/target
 RUST_LIB_DIR ?= $(WORKSPACE_ROOT)/.lib
 
 # Detect platform and set library extensions
-UNAME_S := $(shell uname -s)
-ifeq ($(UNAME_S),Darwin)
-    LIB_EXT := dylib
-else ifeq ($(UNAME_S),Linux)
-    LIB_EXT := so
+ifeq ($(OS),Windows_NT)
+    LIB_EXT := dll
+    DETECTED_OS := Windows
 else
-    $(error Unsupported operating system: $(UNAME_S))
+    UNAME_S := $(shell uname -s)
+    ifeq ($(UNAME_S),Darwin)
+        LIB_EXT := dylib
+        DETECTED_OS := macOS
+    else ifeq ($(UNAME_S),Linux)
+        LIB_EXT := so
+        DETECTED_OS := Linux
+    else
+        $(error Unsupported operating system: $(UNAME_S))
+    endif
 endif
 
 # Define library names and paths

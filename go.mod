@@ -8,6 +8,7 @@ require (
 	github.com/NethermindEth/juno v0.11.7
 	github.com/alecthomas/participle/v2 v2.1.1
 	github.com/aptos-labs/aptos-go-sdk v1.4.1
+	github.com/caarlos0/env/v11 v11.3.1
 	github.com/cometbft/cometbft v0.38.12
 	github.com/coming-chat/go-sui/v2 v2.0.1
 	github.com/consensys/gnark-crypto v0.13.0
@@ -59,7 +60,6 @@ require (
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/bytedance/sonic v1.14.0 // indirect
 	github.com/bytedance/sonic/loader v0.3.0 // indirect
-	github.com/caarlos0/env/v11 v11.3.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.1.3 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cloudwego/base64x v0.1.5 // indirect

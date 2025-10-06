@@ -57,7 +57,8 @@ linters:
         - switch
         - map
     funlen:
-      lines: 100
+      lines: 120
+      statements: 60
     gocritic:
       settings:
         ifElseChain:
@@ -182,6 +183,7 @@ formatters:
     golines:
       max-len: 120
       reformat-tags: false
+      ignore-generated: true
   exclusions:
     generated: lax
     paths:

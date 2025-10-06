@@ -1,0 +1,9 @@
+{
+  "private_key": "your-private-key-here",
+  "public_key": "your-public-key-here",
+  "publisher_id": "your-publisher-id-here",
+  "encryption": {
+    "algorithm": "secp256k1",
+    "format": "hex"
+  }
+}

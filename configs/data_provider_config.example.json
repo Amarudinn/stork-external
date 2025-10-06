@@ -1,0 +1,31 @@
+{
+  "sources": [
+    {
+      "id": "BTCUSD",
+      "config": {
+        "dataSource": "binance",
+        "symbol": "BTCUSDT",
+        "updateFrequency": "1s",
+        "endpoint": "https://api.binance.com/api/v3/ticker/price"
+      }
+    },
+    {
+      "id": "ETHUSD",
+      "config": {
+        "dataSource": "binance", 
+        "symbol": "ETHUSDT",
+        "updateFrequency": "1s",
+        "endpoint": "https://api.binance.com/api/v3/ticker/price"
+      }
+    }
+  ],
+  "output": {
+    "format": "websocket",
+    "port": 8080,
+    "host": "localhost"
+  },
+  "logging": {
+    "level": "info",
+    "format": "json"
+  }
+}

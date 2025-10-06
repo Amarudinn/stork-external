@@ -1,0 +1,18 @@
+{
+  "websocket_url": "wss://api.jp.stork-oracle.network",
+  "api_key": "your-stork-api-key-here",
+  "feeds": [
+    {
+      "id": "BTCUSD",
+      "enabled": true
+    },
+    {
+      "id": "ETHUSD", 
+      "enabled": true
+    }
+  ],
+  "publisher_config": {
+    "signing_key": "your-private-key-here",
+    "publisher_id": "your-publisher-id"
+  }
+}

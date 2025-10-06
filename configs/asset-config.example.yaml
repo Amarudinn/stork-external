@@ -1,0 +1,30 @@
+assets:
+  BTCUSD:
+    asset_id: BTCUSD
+    fallback_period_sec: 60
+    percent_change_threshold: 1.0
+    encoded_asset_id: 0x7404e3d104ea7841c3d9e6fd20adfe99b4ad586bc08d8f3bd3afef894cf184de
+    decimals: 8
+    description: "Bitcoin to USD price feed"
+    
+  ETHUSD:
+    asset_id: ETHUSD
+    fallback_period_sec: 60
+    percent_change_threshold: 1.0
+    encoded_asset_id: 0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+    decimals: 8
+    description: "Ethereum to USD price feed"
+
+  SOLUSD:
+    asset_id: SOLUSD
+    fallback_period_sec: 60
+    percent_change_threshold: 1.5
+    encoded_asset_id: 0xabcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
+    decimals: 8
+    description: "Solana to USD price feed"
+
+# Global configuration
+global:
+  max_price_age_seconds: 300
+  min_publishers: 3
+  confidence_threshold: 0.95

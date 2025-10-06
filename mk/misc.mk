@@ -1,7 +1,20 @@
 LIB_DIR ?= $(CURDIR)/.lib
 
 
-WASMVM_LIB_NAME := libwasmvm.$(shell uname -m | sed 's/x86_64/x86_64/;s/aarch64/aarch64/').so
+# Detect architecture and platform for wasmvm
+ifeq ($(OS),Windows_NT)
+    ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
+        WASMVM_ARCH := x86_64
+    else ifeq ($(PROCESSOR_ARCHITECTURE),ARM64)
+        WASMVM_ARCH := aarch64
+    else
+        WASMVM_ARCH := x86_64
+    endif
+    WASMVM_LIB_NAME := libwasmvm.$(WASMVM_ARCH).dll
+else
+    WASMVM_ARCH := $(shell uname -m | sed 's/x86_64/x86_64/;s/aarch64/aarch64/')
+    WASMVM_LIB_NAME := libwasmvm.$(WASMVM_ARCH).so
+endif
 WASMVM_LIB_DEST := $(LIB_DIR)/$(WASMVM_LIB_NAME)
 
 $(WASMVM_LIB_DEST):

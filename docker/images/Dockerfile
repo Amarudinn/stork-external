@@ -9,7 +9,10 @@ RUN apt-get update && apt-get install -y \
     libc6-dev-arm64-cross \
     g++-x86-64-linux-gnu \
     libc6-dev-amd64-cross \
-    build-essential
+    build-essential \
+    pkg-config \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 
 # mount cache for incremental rust builds
